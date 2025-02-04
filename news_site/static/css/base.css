@@ -1,0 +1,53 @@
+.custom-h4 {
+    font-family: 'Lobster', cursive;
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.navbar-custom {
+    background-color: white;
+}
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem; 
+    color: #4CAF50;
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.dropdown-menu {
+    margin-right: 20px; 
+}
+
+@media (max-width: 767.98px) {
+    .navbar-toggler {
+        margin-left: auto; 
+    }
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-custom {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.navbar-center {
+    justify-content: center;
+}

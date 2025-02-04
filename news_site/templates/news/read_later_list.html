@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Закладки{% endblock %}
+
+{% block content %}
+    {% for item in read_later_items %}
+    <div id="read-later-item-{{ item.news.id }}" class="card border-dark mb-3">
+        <div class="card-header">
+            <h5><a href="{{ item.news.url }}" class="link-success link-offset-2 link-underline-opacity-25">{{ item.news.title|safe }}</a></h5>
+        </div>
+        <div class="card-body">
+            <p>{{ item.news.content|safe }}</p>
+            <p><a href="{{ item.news.url }}" class="link-success link-offset-2 link-underline-opacity-25">Читать далее...</a></p>
+            <p>{{ item.news.published_date }}</p>
+            <button id="read-later-button-{{ item.news.id }}" 
+                    hx-post="{% url 'news:remove_from_read_later' item.news.id %}?from_read_later=true" 
+                    hx-target="#read-later-item-{{ item.news.id }}" 
+                    hx-swap="delete" 
+                    class="btn btn-danger"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+    {% empty %}
+        <p class="text-center">Список пуст</p>
+    {% endfor %}
+{% endblock %}

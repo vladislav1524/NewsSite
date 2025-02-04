@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center">
+        <h1 class="mb-4">Ссылка недоступна</h1>
+        <p>К сожалению, ссылка на эту новость недоступна. Пожалуйста, попробуйте позже или вернитесь на главную страницу.</p>
+        <a href="{% url 'news:news_list' %}" class="btn btn-success">Вернуться на главную страницу</a>
+    </div>
+{% endblock %}
